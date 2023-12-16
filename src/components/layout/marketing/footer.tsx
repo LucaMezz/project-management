@@ -4,10 +4,10 @@ import React from "react";
 
 import { cn } from "@/lib/utils";
 
-import SocialIcons from "../misc/social-icons";
-import { Separator } from "../ui/separator";
-import SiteLogo from "./site-logo";
-import { ThemeToggle } from "./theme-toggle";
+import SocialIcons from "../../misc/social-icons";
+import { Separator } from "../../ui/separator";
+import SiteLogo from "../site-logo";
+import { ThemeToggle } from "../theme-toggle";
 
 export interface FooterProps extends React.HTMLAttributes<HTMLElement> {}
 

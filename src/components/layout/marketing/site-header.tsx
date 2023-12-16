@@ -8,11 +8,10 @@ import { IoIosClose } from "react-icons/io";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { Icons } from "@/components/layout/icons";
-import { MainNav } from "@/components/layout/main-nav";
+import { MainNav } from "@/components/layout/marketing/main-nav";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 
-import SiteLogo from "./site-logo";
+import SiteLogo from "../site-logo";
 
 export function SiteHeader() {
   const [border, setBorder] = useState(false);

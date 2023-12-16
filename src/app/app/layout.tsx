@@ -4,8 +4,9 @@ import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
-import Footer from "@/components/layout/marketing/footer";
-import { SiteHeader } from "@/components/layout/marketing/site-header";
+import Footer from "@/components/layout/app/footer";
+import Sidebar from "@/components/layout/app/sidebar";
+import SiteHeader from "@/components/layout/app/site-header";
 import { TailwindIndicator } from "@/components/layout/tailwind-indicator";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 
@@ -42,10 +43,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="relative flex min-h-screen flex-col">
-              <SiteHeader />
-              <div className="flex-1">{children}</div>
-              <Footer />
+            <div className="flex min-h-screen flex-row">
+              <Sidebar />
+              <div className="flex w-[calc(100%-13.5rem)] flex-col">
+                <SiteHeader />
+                <div className="flex-1 bg-muted">{children}</div>
+              </div>
             </div>
           </ThemeProvider>
         </body>

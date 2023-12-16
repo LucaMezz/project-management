@@ -1,13 +1,13 @@
 import { NextPage } from "next";
 
+import LoginCard from "@/components/layout/auth/login/login-card";
 import SiteLogo from "@/components/layout/site-logo";
-import LoginCard from "@/components/login/login-card";
 
 type Props = {};
 
 const Login: NextPage<Props> = ({}: Props) => {
   return (
-    <div className="flex p-4 lg:p-0">
+    <div className="flex p-4 md:p-0">
       <div className="hidden h-screen w-1/3 bg-muted p-24 md:inline-block">
         <SiteLogo />
       </div>

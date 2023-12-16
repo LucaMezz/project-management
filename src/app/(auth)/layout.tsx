@@ -4,8 +4,8 @@ import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
-import Footer from "@/components/layout/footer";
-import { SiteHeader } from "@/components/layout/site-header";
+import Footer from "@/components/layout/marketing/footer";
+import { SiteHeader } from "@/components/layout/marketing/site-header";
 import { TailwindIndicator } from "@/components/layout/tailwind-indicator";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 
