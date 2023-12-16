@@ -9,11 +9,11 @@ import { cn } from "@/lib/utils";
 
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
-import LoginForm from "./login-form";
+import SignupForm from "./signup-form";
 
-export interface LoginCardProps extends React.HTMLAttributes<HTMLElement> {}
+export interface SignupCardProps extends React.HTMLAttributes<HTMLElement> {}
 
-const LoginCard = ({ className, ...props }: LoginCardProps) => {
+const SignupCard = ({ className, ...props }: SignupCardProps) => {
   return (
     <div
       className={cn(
@@ -22,17 +22,14 @@ const LoginCard = ({ className, ...props }: LoginCardProps) => {
       )}
       {...props}
     >
-      <h1 className="text-3xl font-semibold">Log in</h1>
+      <h1 className="text-3xl font-semibold">Sign Up</h1>
       <p className="mb-4 text-muted-foreground">
-        New user?{" "}
+        Already a user?{" "}
         <span className="text-blue-400 underline">
-          <Link href={"/signup"}>Create an account.</Link>
+          <Link href={"/login"}>Login.</Link>
         </span>
       </p>
-      <LoginForm />
-      <p className="mt-2 text-center text-blue-400 underline">
-        Forgot password
-      </p>
+      <SignupForm />
       <p className="mt-4 text-center">OR</p>
       <Separator className="mb-2" />
       <div className="flex flex-col gap-y-4">
@@ -52,7 +49,7 @@ const LoginCard = ({ className, ...props }: LoginCardProps) => {
               />
               <p
                 className={cn(signOnMethod.textColour)}
-              >{`Continue with ${signOnMethod.name}`}</p>
+              >{`Signup with ${signOnMethod.name}`}</p>
             </Button>
           );
         })}
@@ -61,4 +58,4 @@ const LoginCard = ({ className, ...props }: LoginCardProps) => {
   );
 };
 
-export default LoginCard;
+export default SignupCard;

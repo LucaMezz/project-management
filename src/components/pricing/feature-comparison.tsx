@@ -14,7 +14,7 @@ export interface FeatureComparisonProps
 
 const FeatureComparison = ({ className, ...props }: FeatureComparisonProps) => {
   return (
-    <div className={cn(className, "")} {...props}>
+    <div className={cn(className, "lg:px-12")} {...props}>
       <div className="mb-12 flex flex-col gap-4">
         <Heading className="text-4xl lg:text-5xl">Feature Comparison</Heading>
         <p className="text-center text-muted-foreground">
@@ -31,7 +31,7 @@ const FeatureComparison = ({ className, ...props }: FeatureComparisonProps) => {
         {keyFeatures.map((feature, key) => {
           return (
             <>
-              <h1 className="text-lg">{feature.name}</h1>
+              <h1 className="text-base lg:text-lg">{feature.name}</h1>
 
               {feature.free.available ? (
                 feature.free.quantity ? (

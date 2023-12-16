@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import FadeIn from "react-fade-in/lib/FadeIn";
 
 import { cn } from "@/lib/utils";
@@ -31,8 +32,11 @@ const Hero = ({ className, ...props }: HeroProps) => {
           An all in one project management solution tailor-made for teams
         </p>
         <div className="mb-20 flex gap-x-4">
-          <Button className="bg-gradient-to-t from-[#7d3cb9] to-[#e26ed8] text-white">
-            Get Started
+          <Button
+            className="bg-gradient-to-t from-[#7d3cb9] to-[#e26ed8] text-white"
+            asChild
+          >
+            <Link href={"/app"}>Get Started</Link>
           </Button>
           <Button>Book Demo</Button>
         </div>

@@ -20,21 +20,30 @@ import { Input } from "@/components/ui/input";
 
 import { Button } from "../ui/button";
 
-const formSchema = z.object({
-  email: z.string().email(),
-  password: z.string(),
-});
+const formSchema = z
+  .object({
+    username: z.string().min(3).max(39),
+    email: z.string().email(),
+    password: z.string().min(4),
+    confirmPassword: z.string().min(4),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "The passwords did not match",
+    path: ["confirmPassword"],
+  });
 
-export interface LoginFormProps extends React.HTMLAttributes<HTMLElement> {}
+export interface SignupFormProps extends React.HTMLAttributes<HTMLElement> {}
 
-const LoginForm = ({}: LoginFormProps) => {
+const SignupForm = ({}: SignupFormProps) => {
   const router = useRouter();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
+      username: "",
       email: "",
       password: "",
+      confirmPassword: "",
     },
   });
 
@@ -47,6 +56,18 @@ const LoginForm = ({}: LoginFormProps) => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
+        <FormField
+          control={form.control}
+          name="username"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <Input placeholder="Username" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
         <FormField
           control={form.control}
           name="email"
@@ -71,12 +92,28 @@ const LoginForm = ({}: LoginFormProps) => {
             </FormItem>
           )}
         />
+        <FormField
+          control={form.control}
+          name="confirmPassword"
+          render={({ field }) => (
+            <FormItem>
+              <FormControl>
+                <Input
+                  placeholder="Confirm Password"
+                  type={"password"}
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
         <Button type="submit" className="w-full">
-          Log In
+          Sign Up
         </Button>
       </form>
     </Form>
   );
 };
 
-export default LoginForm;
+export default SignupForm;

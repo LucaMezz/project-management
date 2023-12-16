@@ -8,7 +8,8 @@ const authenticationConfig = {
     {
       name: "Github",
       logoURL: "/brands/github.png",
-      colour: "bg-black text-white",
+      colour: "bg-black text-white hover:bg-[#aaaaaa]",
+      textColour: "",
     },
   ],
 };
