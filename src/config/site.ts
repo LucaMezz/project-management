@@ -1,4 +1,4 @@
-export type SiteConfig = typeof siteConfig
+export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Next.js",
@@ -9,10 +9,50 @@ export const siteConfig = {
       title: "Home",
       href: "/",
     },
+    {
+      title: "Pricing",
+      href: "/pricing",
+    },
+    {
+      title: "Blog",
+      href: "/blog",
+    },
   ],
-  links: {
+  socialProofs: [
+    {
+      name: "Logoipsum",
+      logo: "/home/logoipsum-211.svg",
+      href: "",
+    },
+    {
+      name: "Logoipsum",
+      logo: "/home/logoipsum-214.svg",
+      href: "",
+    },
+    {
+      name: "Logoipsum",
+      logo: "/home/logoipsum-216.svg",
+      href: "",
+    },
+    {
+      name: "Logoipsum",
+      logo: "/home/logoipsum-218.svg",
+      href: "",
+    },
+    {
+      name: "Logoipsum",
+      logo: "/home/logoipsum-221.svg",
+      href: "",
+    },
+    {
+      name: "Logoipsum",
+      logo: "/home/logoipsum-217.svg",
+      href: "",
+    },
+  ],
+  socials: {
     twitter: "https://twitter.com/shadcn",
     github: "https://github.com/shadcn/ui",
     docs: "https://ui.shadcn.com",
   },
-}
+};
