@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -28,60 +29,41 @@ const ProfileDropdown = ({ className, ...props }: ProfileDropdownProps) => {
         <DropdownMenuTrigger asChild>
           <div className="rounded-full bg-transparent p-[1px] hover:bg-black hover:dark:bg-white">
             <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" />
+              <AvatarImage src="https://github.com/LucaMezz.png" />
               <AvatarFallback>W</AvatarFallback>
             </Avatar>
           </div>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="m-4 w-56">
+        <DropdownMenuContent className="m-4 w-72">
           <DropdownMenuLabel>My Account</DropdownMenuLabel>
+          <DropdownMenuLabel>
+            <div className="flex gap-3">
+              <Avatar>
+                <AvatarImage src="https://github.com/LucaMezz.png" />
+                <AvatarFallback>W</AvatarFallback>
+              </Avatar>
+              <div>
+                <p>LucaMezz</p>
+                <p className="text-xs">lucamezza4@gmail.com</p>
+              </div>
+            </div>
+          </DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
-            <DropdownMenuItem>
-              Profile
-              <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              Billing
-              <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              Settings
-              <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              Keyboard shortcuts
-              <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
-            </DropdownMenuItem>
+            <Link href="/app/profile" className="bg-pink-100">
+              <DropdownMenuItem>Profile</DropdownMenuItem>
+            </Link>
+            <Link href="/app/billing" className="bg-pink-100">
+              <DropdownMenuItem>Billing</DropdownMenuItem>
+            </Link>
+            <Link href="/app/settings" className="bg-pink-100">
+              <DropdownMenuItem>Settings</DropdownMenuItem>
+            </Link>
           </DropdownMenuGroup>
           <DropdownMenuSeparator />
-          <DropdownMenuGroup>
-            <DropdownMenuItem>Team</DropdownMenuItem>
-            <DropdownMenuSub>
-              <DropdownMenuSubTrigger>Invite users</DropdownMenuSubTrigger>
-              <DropdownMenuPortal>
-                <DropdownMenuSubContent>
-                  <DropdownMenuItem>Email</DropdownMenuItem>
-                  <DropdownMenuItem>Message</DropdownMenuItem>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem>More...</DropdownMenuItem>
-                </DropdownMenuSubContent>
-              </DropdownMenuPortal>
-            </DropdownMenuSub>
-            <DropdownMenuItem>
-              New Team
-              <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
-            </DropdownMenuItem>
-          </DropdownMenuGroup>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem>GitHub</DropdownMenuItem>
-          <DropdownMenuItem>Support</DropdownMenuItem>
-          <DropdownMenuItem disabled>API</DropdownMenuItem>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem>
-            Log out
-            <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
-          </DropdownMenuItem>
+          <Link href="/" className="bg-pink-100">
+            <DropdownMenuItem>Log out</DropdownMenuItem>
+          </Link>
         </DropdownMenuContent>
       </DropdownMenu>
     </div>

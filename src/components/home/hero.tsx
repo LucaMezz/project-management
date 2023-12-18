@@ -42,7 +42,7 @@ const Hero = ({ className, ...props }: HeroProps) => {
         </div>
 
         <p className="text-[#1e2227] dark:text-[#576068]">TRUSTED BY</p>
-        <SocialProof />
+        <SocialProof className="bg-pink w-[350px] md:w-[600px] lg:w-[1000px] xl:w-[1200px]" />
       </FadeIn>
     </section>
   );

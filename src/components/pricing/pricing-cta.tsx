@@ -16,7 +16,9 @@ const PricingCTA = ({ className, ...props }: PricingCTAProps) => {
       {...props}
     >
       <div className="my-32 flex flex-col items-center justify-center gap-y-8">
-        <Heading className="h-[70px]">Optimize your Workflow</Heading>
+        <Heading className="whitespace-pre-wrap md:whitespace-normal lg:text-6xl">
+          Optimize your{"\n"}Workflow
+        </Heading>
         <Button
           className="bg-gradient-to-t from-[#7d3cb9] to-[#e26ed8] text-foreground hover:underline"
           asChild

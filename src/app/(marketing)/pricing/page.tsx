@@ -25,7 +25,7 @@ declare global {
 
 const Pricing: NextPage<Props> = ({}: Props) => {
   return (
-    <div className="container flex flex-col gap-12 py-24">
+    <div className="container flex flex-col gap-12 py-12 md:py-24">
       <PricingPlans />
       <FeatureComparison className="mt-[4.8rem]" />
       <FAQ className="mt-24" />

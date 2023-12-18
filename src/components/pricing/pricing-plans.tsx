@@ -18,8 +18,8 @@ const PricingPlans = ({ className, ...props }: PricingPlansProps) => {
     >
       <FadeIn className="flex flex-col gap-4">
         <p className="text-center text-muted-foreground">PRICING</p>
-        <Heading className="h-[70px] text-4xl lg:text-5xl">
-          Get the ball rolling!
+        <Heading className="w-full whitespace-pre-wrap text-center text-4xl sm:whitespace-normal">
+          Get the ball{"\n"}rolling!
         </Heading>
       </FadeIn>
       <script async src="https://js.stripe.com/v3/pricing-table.js"></script>

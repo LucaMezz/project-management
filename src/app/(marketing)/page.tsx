@@ -7,8 +7,8 @@ import SocialProof from "@/components/home/social-proof";
 
 export default function IndexPage() {
   return (
-    <section>
+    <>
       <Hero />
-    </section>
+    </>
   );
 }

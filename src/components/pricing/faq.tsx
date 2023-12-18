@@ -18,14 +18,14 @@ const FAQ = ({ className, ...props }: FAQProps) => {
   return (
     <div className={cn(className, " flex flex-col items-center")} {...props}>
       <div className="mb-12 flex flex-col gap-1">
-        <Heading className="h-[70px] text-4xl lg:text-5xl">
-          Frequently Asked Questions
+        <Heading className="whitespace-pre-wrap text-4xl sm:whitespace-normal lg:text-5xl">
+          Frequently{"\n"}Asked Questions
         </Heading>
         <p className="text-center text-muted-foreground">
           Explore answers to common inquiries.
         </p>
       </div>
-      <Accordion type="single" collapsible className="w-2/3">
+      <Accordion type="single" collapsible className="w-full md:w-2/3">
         <AccordionItem value="item-1">
           <AccordionTrigger>
             Which payment methods do you accept?
