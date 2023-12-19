@@ -4,4 +4,5 @@ export interface NavItem {
   relative?: string;
   disabled?: boolean;
   external?: boolean;
+  separator?: boolean;
 }

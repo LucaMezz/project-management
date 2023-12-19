@@ -7,13 +7,13 @@ import { FaGithub } from "react-icons/fa";
 
 import { cn } from "@/lib/utils";
 
-import { Button } from "../../../ui/button";
-import { Separator } from "../../../ui/separator";
-import SignupForm from "./signup-form";
+import { Button } from "../../ui/button";
+import { Separator } from "../../ui/separator";
+import LoginForm from "./login-form";
 
-export interface SignupCardProps extends React.HTMLAttributes<HTMLElement> {}
+export interface LoginCardProps extends React.HTMLAttributes<HTMLElement> {}
 
-const SignupCard = ({ className, ...props }: SignupCardProps) => {
+const LoginCard = ({ className, ...props }: LoginCardProps) => {
   return (
     <div
       className={cn(
@@ -22,14 +22,17 @@ const SignupCard = ({ className, ...props }: SignupCardProps) => {
       )}
       {...props}
     >
-      <h1 className="text-3xl font-semibold">Sign Up</h1>
+      <h1 className="text-3xl font-semibold">Log in</h1>
       <p className="mb-4 text-muted-foreground">
-        Already a user?{" "}
+        New user?{" "}
         <span className="text-blue-400 underline">
-          <Link href={"/login"}>Login.</Link>
+          <Link href={"/signup"}>Create an account.</Link>
         </span>
       </p>
-      <SignupForm />
+      <LoginForm />
+      <p className="mt-2 text-center text-blue-400 underline">
+        Forgot password
+      </p>
       <p className="mt-4 text-center">OR</p>
       <Separator className="mb-2" />
       <div className="flex flex-col gap-y-4">
@@ -44,7 +47,7 @@ const SignupCard = ({ className, ...props }: SignupCardProps) => {
             width={25}
             height={25}
           />
-          <p className={cn("text-black")}>Signup with Google</p>
+          <p className={cn("text-black")}>Continue with Google</p>
         </Button>
         <Button
           className={cn(
@@ -52,11 +55,11 @@ const SignupCard = ({ className, ...props }: SignupCardProps) => {
           )}
         >
           <FaGithub size={25} color="white" />
-          <p className={cn("text-white")}>Signup with Github</p>
+          <p className={cn("text-white")}>Continue with Github</p>
         </Button>
       </div>
     </div>
   );
 };
 
-export default SignupCard;
+export default LoginCard;

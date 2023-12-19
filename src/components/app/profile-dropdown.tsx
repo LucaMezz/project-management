@@ -1,5 +1,9 @@
 import React from "react";
 import Link from "next/link";
+import { FaCreditCard } from "react-icons/fa6";
+import { IoIosSettings } from "react-icons/io";
+import { IoPerson } from "react-icons/io5";
+import { RiLogoutBoxRLine } from "react-icons/ri";
 
 import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -51,18 +55,30 @@ const ProfileDropdown = ({ className, ...props }: ProfileDropdownProps) => {
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
             <Link href="/app/profile" className="bg-pink-100">
-              <DropdownMenuItem>Profile</DropdownMenuItem>
+              <DropdownMenuItem>
+                <IoPerson className="mr-2 h-4 w-4" />
+                Profile
+              </DropdownMenuItem>
             </Link>
             <Link href="/app/billing" className="bg-pink-100">
-              <DropdownMenuItem>Billing</DropdownMenuItem>
+              <DropdownMenuItem>
+                <FaCreditCard className="mr-2 h-4 w-4" />
+                Billing
+              </DropdownMenuItem>
             </Link>
             <Link href="/app/settings" className="bg-pink-100">
-              <DropdownMenuItem>Settings</DropdownMenuItem>
+              <DropdownMenuItem>
+                <IoIosSettings className="mr-2 h-4 w-4" />
+                Settings
+              </DropdownMenuItem>
             </Link>
           </DropdownMenuGroup>
           <DropdownMenuSeparator />
           <Link href="/" className="bg-pink-100">
-            <DropdownMenuItem>Log out</DropdownMenuItem>
+            <DropdownMenuItem>
+              <RiLogoutBoxRLine className="mr-2 h-4 w-4" />
+              Log out
+            </DropdownMenuItem>
           </Link>
         </DropdownMenuContent>
       </DropdownMenu>

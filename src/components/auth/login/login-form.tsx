@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 
-import { Button } from "../../../ui/button";
+import { Button } from "../../ui/button";
 
 const formSchema = z.object({
   email: z.string().email(),

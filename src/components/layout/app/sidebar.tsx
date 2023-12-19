@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { FaCrown } from "react-icons/fa";
 
 import appConfig from "@/config/app";
 import { cn } from "@/lib/utils";
@@ -21,10 +22,13 @@ const Sidebar = ({ className, ...props }: SidebarProps) => {
       </div>
       <div className="flex h-[3.5rem] items-center justify-center px-4">
         <Button
-          className="w-full bg-[rgb(157,67,243)] text-white hover:bg-[rgb(112,48,172)]"
+          className="w-full bg-gradient-to-t from-[#7d3cb9] to-[#e26ed8] text-white hover:from-[#5e2494] hover:to-[#91458a]"
           asChild
         >
-          <Link href={"/pricing"}>Upgrade to Pro</Link>
+          <Link href={"/pricing"}>
+            Upgrade to Pro
+            <FaCrown className="ml-2 h-4 w-4" />
+          </Link>
         </Button>
       </div>
     </div>

@@ -26,6 +26,7 @@ export function MainNav({
       {items?.length ? (
         <nav className={cn("flex flex-col", className)} {...props}>
           {items?.map((item, index) => {
+            if (item.separator) return <div className="h-4"></div>;
             return (
               item.href && (
                 <Link

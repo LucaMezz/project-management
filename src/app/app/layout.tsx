@@ -45,9 +45,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="flex min-h-screen flex-row">
               <Sidebar />
-              <div className="flex w-[calc(100%-13.5rem)] flex-col">
+              <div className="flex w-[calc(100%-13.5rem)] flex-col bg-muted">
                 <SiteHeader />
-                <div className="flex-1 bg-muted">{children}</div>
+                <div className="container flex-1 py-16">{children}</div>
               </div>
             </div>
           </ThemeProvider>

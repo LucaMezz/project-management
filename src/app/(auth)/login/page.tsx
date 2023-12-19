@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 
-import LoginCard from "@/components/layout/auth/login/login-card";
+import LoginCard from "@/components/auth/login/login-card";
 import SiteLogo from "@/components/layout/site-logo";
 
 type Props = {};
